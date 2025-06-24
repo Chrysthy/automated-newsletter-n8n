@@ -12,6 +12,7 @@
   <a href="#-screenshots">Screenshots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-overview">Overview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tools">Tools</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-run">How to Run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-contributing">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -48,5 +49,18 @@
 - [Google Gemini API](https://cloud.google.com/vertex-ai/docs/generative-ai) – AI summarization
 - Markdown → HTML parser
 - Gmail API – Email delivery
+
+<br>
+
+## ⚙ How to Run
+
+1. Install [n8n](https://docs.n8n.io/hosting/installation/).
+2. Import the workflow JSON file (`Simple_Newsletter.json`).
+3. Set up your credentials:
+   - Google Gemini API Key
+   - Gmail account for email delivery
+4. Customize your RSS feeds if needed.
+5. Configure the schedule for automated execution.
+
 
 <br>
