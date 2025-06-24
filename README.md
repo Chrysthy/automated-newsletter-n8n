@@ -70,3 +70,10 @@
  This project automates the collection of RSS feed data, summarizes the content using Google Gemini AI, and delivers a clean, well-structured newsletter via email. It’s designed to streamline information from multiple sources into a concise RTB (Real-Time Briefing). It also uses a prompt based on the PRINCE methodology to ensure clarity, conciseness, and a professional tone in the generated content.
 
 <br>
+
+
+## 📜 License
+
+* This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
+
+<br>
