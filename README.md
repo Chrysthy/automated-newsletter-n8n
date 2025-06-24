@@ -24,3 +24,18 @@
 <img src=".github/gif-do-projeto.gif" alt="gif do projeto">
 
 <br>
+
+## 🔗 Overview
+
+1. **Schedule Trigger:** Defines when the workflow runs (e.g., daily at 8 AM).
+2. **RSS Feeds:** Collects data from:
+   - PlayStation News
+   - G1 Mundo (World News)
+   - Central Bank Exchange Rates
+3. **Limit & Edit Fields:** Filters and formats the raw data.
+4. **Merge + Aggregate:** Combines all data into a single digest.
+5. **Basic LLM Chain:** Uses Google Gemini to summarize the aggregated content.
+6. **Markdown to HTML:** Converts markdown text to HTML for email formatting.
+7. **Send Message:** Sends the newsletter via Gmail.
+
+<br>
