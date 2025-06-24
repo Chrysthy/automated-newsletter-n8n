@@ -1,7 +1,7 @@
 <h1 align="center">Automated NewsLetter N8N 📰</h1>
 
 <p align="center">
-  This project automates the collection of RSS feed data, summarizes the content using Google Gemini AI, and delivers a clean, well-structured newsletter via email. It’s designed to streamline information from multiple sources into a concise RTB (Real-Time Briefing). It also uses a prompt based on the PRINCE methodology to ensure clarity, conciseness, and a professional tone in the generated content.
+ AI-powered automation for turning RSS feeds into a well-structured Real-Time Briefing (RTB). Uses Google Gemini for summarization, Markdown for formatting, and n8n for workflow orchestration.
 </p>
 
 <p align="center">
@@ -62,5 +62,11 @@
 4. Customize your RSS feeds if needed.
 5. Configure the schedule for automated execution.
 
+
+<br>
+
+## 💻 Project
+
+ This project automates the collection of RSS feed data, summarizes the content using Google Gemini AI, and delivers a clean, well-structured newsletter via email. It’s designed to streamline information from multiple sources into a concise RTB (Real-Time Briefing). It also uses a prompt based on the PRINCE methodology to ensure clarity, conciseness, and a professional tone in the generated content.
 
 <br>
