@@ -11,6 +11,7 @@
 <p align="center">  
   <a href="#-screenshots">Screenshots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-overview">Overview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tools">Tools</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-contributing">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -37,5 +38,15 @@
 5. **Basic LLM Chain:** Uses Google Gemini to summarize the aggregated content.
 6. **Markdown to HTML:** Converts markdown text to HTML for email formatting.
 7. **Send Message:** Sends the newsletter via Gmail.
+
+<br>
+
+## 🛠 Tools
+
+- [n8n](https://n8n.io/) – Automation workflow tool
+- [RSS Feeds](https://en.wikipedia.org/wiki/RSS) – Data sources
+- [Google Gemini API](https://cloud.google.com/vertex-ai/docs/generative-ai) – AI summarization
+- Markdown → HTML parser
+- Gmail API – Email delivery
 
 <br>
