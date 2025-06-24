@@ -10,7 +10,7 @@
 
 <p align="center">  
   <a href="#-screenshots">Screenshots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-technologies">Overview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-overview">Overview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-contributing">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -27,7 +27,7 @@
 
 ## 🔗 Overview
 
-1. **Schedule Trigger:** Defines when the workflow runs (e.g., daily at 8 AM).
+1. **Schedule Trigger:** Defines when the workflow runs (e.g., daily at 7 AM).
 2. **RSS Feeds:** Collects data from:
    - PlayStation News
    - G1 Mundo (World News)
