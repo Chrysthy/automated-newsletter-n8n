@@ -1,0 +1,197 @@
+{
+  "name": "Simple Newsletter 2",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 7
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -400,
+        -160
+      ],
+      "id": "node-1",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field-1",
+              "name": "artigo",
+              "value": "=<titulo>\n{{ $json.title }}\n</titulo>\n\n<conteudo>\n{{ $json.contentSnippet }}\n</conteudo>\n\n<link>\n{{ $json.link }}\n</link>",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        240,
+        -160
+      ],
+      "id": "node-2",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "artigo"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        780,
+        -160
+      ],
+      "id": "node-3",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash",
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        840,
+        80
+      ],
+      "id": "node-4",
+      "name": "Google Gemini Chat Model"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.artigo }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "PROMPT_REMOVIDO_PARA_REDUZIR_TAMANHO_DO_EXEMPLO"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        1020,
+        -160
+      ],
+      "id": "node-5",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        560,
+        -160
+      ],
+      "id": "node-6",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "url": "https://www.bcb.gov.br/api/feed/sitebcb/sitefeeds/cambio",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -120,
+        60
+      ],
+      "id": "node-7",
+      "name": "RSS Câmbio Banco Central"
+    },
+    {
+      "parameters": {
+        "url": "https://blog.playstation.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -120,
+        -380
+      ],
+      "id": "node-8",
+      "name": "RSS PlayStation"
+    },
+    {
+      "parameters": {
+        "url": "https://g1.globo.com/rss/g1/mundo/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -120,
+        -160
+      ],
+      "id": "node-9",
+      "name": "RSS G1 Mundo"
+    },
+    {
+      "parameters": {
+        "mode": "markdownToHtml",
+        "markdown": "={{ $json.text }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.markdown",
+      "typeVersion": 1,
+      "position": [
+        1380,
+        -160
+      ],
+      "id": "node-10",
+      "name": "Markdown"
+    },
+    {
+      "parameters": {
+        "sendTo": "SET_ENV_VARIABLE_OR_N8N_VARIABLE",
+        "subject": "News Diárias",
+        "message": "={{ $json.data }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1580,
+        -160
+      ],
+      "id": "node-11",
+      "name": "Send a message"
+    }
+  ],
+  "connections": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": []
+}
